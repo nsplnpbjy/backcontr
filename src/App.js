@@ -1,25 +1,18 @@
-import logo from './logo.svg';
+import React from "react";
+import { BrowserRouter, Route, Routes, Switch } from "react-router-dom";
 import './App.css';
+import ContrPage from "./pages/ContrPage";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<ContrPage />} />
+        </Routes>
+      
+    </BrowserRouter>
   );
+  
 }
 
 export default App;
